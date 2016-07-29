@@ -1,0 +1,16 @@
+version: 1.0.0
+tags: []
+layout:
+  sol_sources: contracts
+  build_dir: build
+dependencies: {}
+ignore: []
+name: MeasureGas
+environments:
+  default: test
+  test:
+    confirmationBlocks: 0
+    objects:
+      spendGas:
+        class: SpendGas
+        address: '0xe1d3adf3908c0ea54a50e301af3a622dcb92ef20'

@@ -1,0 +1,30 @@
+{
+  "name": "measure-gas",
+  "version": "0.0.1",
+  "description": "Scripts and contracts for measuring gas usage in various environments",
+  "main": "index.js",
+  "scripts": {
+    "test": "dapple test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chatch/ethereum-scratch.git"
+  },
+  "keywords": [
+    "ethereum",
+    "gas",
+    "solidity",
+    "cost",
+    "dapple"
+  ],
+  "author": "Chris Hatch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chatch/ethereum-scratch/issues"
+  },
+  "homepage": "https://github.com/chatch/ethereum-scratch#readme",
+  "dependencies": {
+    "read-yaml": "^1.0.0",
+    "web3": "^0.17.0-alpha"
+  }
+}
