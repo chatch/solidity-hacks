@@ -1,0 +1,28 @@
+{
+  "name": "fatdb",
+  "version": "1.0.0",
+  "description": "Fill a DB contract with a lot of data",
+  "main": "fatdb.js",
+  "scripts": {
+    "test": "dapple test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chatch/ethereum-scratch/FatDB"
+  },
+  "keywords": [
+    "ethereum",
+    "solidity",
+    "contract"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chatch/ethereum-scratch/issues"
+  },
+  "homepage": "https://github.com/chatch/ethereum-scratch/FatDB",
+  "dependencies": {
+    "geth-private": "^1.3.0",
+    "web3": "^0.17.0-alpha"
+  }
+}
