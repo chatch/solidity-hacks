@@ -1,0 +1,11 @@
+version: 1.0.0
+tags: []
+layout:
+  sol_sources: contracts
+  build_dir: build
+dependencies: {}
+ignore: []
+name: FatDB
+environments:
+  privatenet:
+    confirmationBlocks: 1
