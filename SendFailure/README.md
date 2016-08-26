@@ -1,3 +1,5 @@
+Tests sending ether to an address called '0xdead' and checks behavior (see sendToBadAddress).
+
 Calling sendToBadAddress on Morden raised these events:
 
 _bal: 10000000000000
