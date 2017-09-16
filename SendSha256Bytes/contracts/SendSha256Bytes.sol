@@ -5,16 +5,34 @@ pragma solidity ^0.4.15;
  * out send and receive of byte chunks from js clients.
  */
 contract SendSha256Bytes {
-	mapping (address => uint) balances;
-
 	event LogBytes(bytes32 hashBytes);
 
-	function sendBytes(bytes32 shaHash)
-        constant
-        external
+    bytes32 hash;
+
+    function sendHash(bytes32 _shaHash)
         returns (bytes32)
     {
-        LogBytes(shaHash);
-        return shaHash;
+        LogBytes(_shaHash);
+        hash = _shaHash;
+        return _shaHash;
 	}
+
+    function isMatch(bytes32 _preimage)
+        constant
+        returns (bool)
+    {
+        LogBytes(_preimage);
+        LogBytes(hash);
+        return sha256(_preimage) == hash;
+	}
+
+    function sha256Me(bytes32 _shaMe)
+        constant
+        returns (bytes32 result)
+    {
+        LogBytes(_shaMe);
+        result = sha256(_shaMe);
+        LogBytes(result);
+    }
+
 }
