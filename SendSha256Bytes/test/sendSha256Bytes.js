@@ -6,7 +6,7 @@ const txRetVal = txReceipt => txReceipt.receipt.logs[0].data
 
 // Format required for a send of bytes through eth client:
 //  - hex string representation
-//  - prefixed with 0x - without the 0x the string won
+//  - prefixed with 0x
 const bufToStr = b => '0x' + b.toString('hex')
 const preimageBuf = crypto.randomBytes(32)
 const preimageStr = bufToStr(preimageBuf)
