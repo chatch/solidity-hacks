@@ -4,7 +4,7 @@
 * OverloadFunctionsOle.sol - overload functions with 'constant'
 * ViewsAndPures.sol - shows no issue handling functions with keywords pure / view
 
-Watch contract on the above two contracts OverloadFunctions and OverloadFunctionsOle and the wallet UI will fail to render the functions in the contract view.
+Watch contract on the above two contracts OverloadFunctions and OverloadFunctionsOle and the wallet UI will (https://wallet.ethereum,org) fail to render the functions in the contract view.
 
 Error is "Invalid number of arguments to Solidity function.".
 
