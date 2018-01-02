@@ -2,12 +2,13 @@ pragma solidity ^0.4.18;
 
 /**
  * Factory creating DELETECALL forwarding contracts.
- * The implementation was posted here here:
+ *
+ * This implementation is from:
  *  https://gist.github.com/izqui/7f904443e6d19c1ab52ec7f5ad46b3a8
  */
 contract ForwardFactory {
 
-    function createForwarder(address target) public returns (address fwdContract) {
+    function createForwarder(address _target) public returns (address fwdContract) {
         /*
            Bytecode origin https://www.reddit.com/r/ethereum/comments/6ic49q/any_assembly_programmers_willing_to_write_a/dj5ceuw/
 
@@ -32,7 +33,7 @@ contract ForwardFactory {
        bytes32 b1 = 0x602e600c600039602e6000f33660006000376101006000366000730000000000; // length 27 bytes = 1b
        bytes32 b2 = 0x5af41558576101006000f3000000000000000000000000000000000000000000; // length 11 bytes
        
-       uint256 shiftedAddress = uint256(target) * ((2 ** 8) ** 12);   // Shift address 12 bytes to the left
+       uint256 shiftedAddress = uint256(_target) * ((2 ** 8) ** 12);   // Shift address 12 bytes to the left
        
        assembly {
            let contractCode := mload(0x40)                 // Find empty storage location using "free memory pointer"
@@ -43,7 +44,7 @@ contract ForwardFactory {
            switch extcodesize(fwdContract) case 0 { invalid() }
        }
        
-       ForwarderDeployed(fwdContract, target);
+       ForwarderDeployed(fwdContract, _target);
     }
     
     event ForwarderDeployed(address forwarderAddress, address targetContract);
