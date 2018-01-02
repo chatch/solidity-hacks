@@ -1,0 +1,26 @@
+{
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "ecmaFeatures": {
+      "impliedStrict": true
+    },
+    "sourceType": "module"
+  },
+  "env": {
+    "node": true,
+    "es6": true,
+    "mocha": true
+  },
+  "globals": {
+    // truffle test framework provided:
+    "web3": true,
+    "contract": true,
+    "artifacts": true,
+    "assert": true
+  },
+  "rules": {
+    "no-console": "off",
+    "no-unused-vars": ["warn"]
+  }
+}
